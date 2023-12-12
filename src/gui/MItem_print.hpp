@@ -81,7 +81,7 @@ public:
     MI_PRINTFAN();
     virtual void OnClick() override;
 };
-
+#if 0
 class MI_SPEED : public WiSpinInt {
     constexpr static const char *label = N_("Print Speed");
 
@@ -89,6 +89,7 @@ public:
     MI_SPEED();
     virtual void OnClick() override;
 };
+#endif
 
 class MI_FLOWFACT_ABSTRACT : public WiSpinInt {
     static constexpr const char *const generic_label = N_("Flow Factor"); // Generic string for no toolchanger

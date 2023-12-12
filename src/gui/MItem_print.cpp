@@ -66,12 +66,14 @@ uint8_t MI_PRINTFAN::val_mapping(const bool rounding_floor, const uint8_t val, c
 
 /*****************************************************************************/
 // MI_SPEED
-/* MI_SPEED::MI_SPEED()
+#if 0
+MI_SPEED::MI_SPEED()
     : WiSpinInt(uint16_t(marlin_vars()->print_speed),
         SpinCnf::feedrate, _(label), &img::speed_16x16, is_enabled_t::yes, is_hidden_t::no) {}
 void MI_SPEED::OnClick() {
     marlin_client::set_print_speed(GetVal());
-} */
+}
+#endif
 
 /*****************************************************************************/
 // MI_FLOWFACT_ABSTRACT

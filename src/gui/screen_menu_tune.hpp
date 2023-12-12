@@ -26,7 +26,9 @@ using ScreenMenuTune__ = ScreenMenu<EFooter::On, MI_RETURN,
 #if ENABLED(CANCEL_OBJECTS)
     MI_CO_CANCEL_OBJECT,
 #endif
+#if 0
     MI_SPEED,
+#endif
     MI_NOZZLE<0>,
 #if HAS_TOOLCHANGER()
     MI_NOZZLE<1>, MI_NOZZLE<2>, MI_NOZZLE<3>, MI_NOZZLE<4>,
