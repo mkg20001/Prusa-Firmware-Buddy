@@ -208,6 +208,10 @@ def switch_to_venv_if_nedded():
         print(
             'You can disable this by setting the BUDDY_NO_VIRTUALENV=1 env. variable.',
             file=sys.stderr)
+        print(venv_bin_dir)
+        if not os.path.exists(venv_bin_dir):
+            print('Create venv...')
+            os.execv('python3', ['-m', 'venv', '.venv'])
         os.execv(str(venv_bin_dir / 'python'),
                  [str(venv_bin_dir / 'python')] + sys.argv)
 
