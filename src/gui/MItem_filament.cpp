@@ -72,6 +72,10 @@ void MI_UNLOAD::Do() {
     }
 #endif
     marlin_client::gcode("M702 W2"); // unload with return option
+    // go into cooldown mode
+    const Response response = filament::get_description(filament::Type::NONE).response;
+    marlin_client::FSM_response(PhasesPreheat::UserTempSelection, response);
+
     Sound_Stop(); // TODO what is Sound_Stop(); doing here?
 }
 
